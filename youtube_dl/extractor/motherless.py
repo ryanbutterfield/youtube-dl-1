@@ -91,7 +91,7 @@ class MotherlessIE(InfoExtractor):
             r'<strong>Uploaded</strong>\s+([^<]+)<', webpage, 'upload date')
         if 'Ago' in upload_date:
             days = int(re.search(r'([0-9]+)', upload_date).group(1))
-            upload_date = (datetime.datetime.now() - datetime.timedelta(days=days)).strftime('%Y%m%d')
+            upload_date = (datetime.datetime.now() - datetime.timedelta(days=days)).strftime('%Y-%m-%d')
         else:
             upload_date = unified_strdate(upload_date)
 

@@ -1167,7 +1167,7 @@ def date_formats(day_first=True):
 
 
 def unified_strdate(date_str, day_first=True):
-    """Return a string with the date in the format YYYYMMDD"""
+    """Return a string with the date in the format YYYY-MM-DD"""
 
     if date_str is None:
         return None
@@ -1180,14 +1180,14 @@ def unified_strdate(date_str, day_first=True):
 
     for expression in date_formats(day_first):
         try:
-            upload_date = datetime.datetime.strptime(date_str, expression).strftime('%Y%m%d')
+            upload_date = datetime.datetime.strptime(date_str, expression).strftime('%Y-%m-%d')
         except ValueError:
             pass
     if upload_date is None:
         timetuple = email.utils.parsedate_tz(date_str)
         if timetuple:
             try:
-                upload_date = datetime.datetime(*timetuple[:6]).strftime('%Y%m%d')
+                upload_date = datetime.datetime(*timetuple[:6]).strftime('%Y-%m-%d')
             except ValueError:
                 pass
     if upload_date is not None:
@@ -1265,7 +1265,7 @@ def date_from_str(date_str):
         unit += 's'
         delta = datetime.timedelta(**{unit: time})
         return today + delta
-    return datetime.datetime.strptime(date_str, '%Y%m%d').date()
+    return datetime.datetime.strptime(date_str, '%Y-%m-%d').date()
 
 
 def hyphenate_date(date_str):

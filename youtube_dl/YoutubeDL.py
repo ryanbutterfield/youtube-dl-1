@@ -1465,7 +1465,7 @@ class YoutubeDL(object):
             # see http://bugs.python.org/issue1646728)
             try:
                 upload_date = datetime.datetime.utcfromtimestamp(info_dict['timestamp'])
-                info_dict['upload_date'] = upload_date.strftime('%Y%m%d')
+                info_dict['upload_date'] = upload_date.strftime('%Y-%m-%d')
             except (ValueError, OverflowError, OSError):
                 pass
 

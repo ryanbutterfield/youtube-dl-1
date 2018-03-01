@@ -24,7 +24,7 @@ class NerdCubedFeedIE(InfoExtractor):
             '_type': 'url',
             'title': feed_entry['title'],
             'uploader': feed_entry['source']['name'] if feed_entry['source'] else None,
-            'upload_date': datetime.datetime.strptime(feed_entry['date'], '%Y-%m-%d').strftime('%Y%m%d'),
+            'upload_date': datetime.datetime.strptime(feed_entry['date'], '%Y-%m-%d').strftime('%Y-%m-%d'),
             'url': 'http://www.youtube.com/watch?v=' + feed_entry['youtube_id'],
         } for feed_entry in feed]
 
