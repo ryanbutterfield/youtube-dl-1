@@ -133,15 +133,15 @@ class ProSiebenSat1IE(ProSiebenSat1BaseIE):
                             (?:
                                 prosieben(?:maxx)?|sixx|sat1(?:gold)?|kabeleins(?:doku)?|the-voice-of-germany|7tv|advopedia
                             )\.(?:de|at|ch)|
-                            ran\.de|fem\.com|advopedia\.de
+                            ran\.de|fem\.com|advopedia\.de|galileo\.tv/video
                         )
                         /(?P<id>.+)
                     '''
 
     _TESTS = [
         {
-            # Tests changes introduced in https://github.com/rg3/youtube-dl/pull/6242
-            # in response to fixing https://github.com/rg3/youtube-dl/issues/6215:
+            # Tests changes introduced in https://github.com/ytdl-org/youtube-dl/pull/6242
+            # in response to fixing https://github.com/ytdl-org/youtube-dl/issues/6215:
             # - malformed f4m manifest support
             # - proper handling of URLs starting with `https?://` in 2.0 manifests
             # - recursive child f4m manifests extraction
@@ -327,6 +327,11 @@ class ProSiebenSat1IE(ProSiebenSat1BaseIE):
             'only_matching': True,
         },
         {
+            # geo restricted to Germany
+            'url': 'https://www.galileo.tv/video/diese-emojis-werden-oft-missverstanden',
+            'only_matching': True,
+        },
+        {
             'url': 'http://www.sat1gold.de/tv/edel-starck/playlist/die-gesamte-1-staffel',
             'only_matching': True,
         },
@@ -343,7 +348,7 @@ class ProSiebenSat1IE(ProSiebenSat1BaseIE):
         r'"clip_id"\s*:\s+"(\d+)"',
         r'clipid: "(\d+)"',
         r'clip[iI]d=(\d+)',
-        r'clip[iI]d\s*=\s*["\'](\d+)',
+        r'clip[iI][dD]\s*=\s*["\'](\d+)',
         r"'itemImageUrl'\s*:\s*'/dynamic/thumbnails/full/\d+/(\d+)",
         r'proMamsId&quot;\s*:\s*&quot;(\d+)',
         r'proMamsId"\s*:\s*"(\d+)',
