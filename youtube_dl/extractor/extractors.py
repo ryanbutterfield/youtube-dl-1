@@ -808,6 +808,8 @@ from .nrk import (
     NRKTVSeasonIE,
     NRKTVSeriesIE,
 )
+from .nrl import NRLTVIE
+from .ntvcojp import NTVCoJpCUIE
 from .ntvde import NTVDeIE
 from .ntvru import NTVRuIE
 from .nytimes import (
@@ -1452,6 +1454,8 @@ from .xxxymovies import XXXYMoviesIE
 from .yahoo import (
     YahooIE,
     YahooSearchIE,
+    YahooGyaOPlayerIE,
+    YahooGyaOIE,
 )
 from .yandexdisk import YandexDiskIE
 from .yandexmusic import (
