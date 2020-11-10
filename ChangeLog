@@ -1,3 +1,9 @@
+version 2020.11.10
+
+Extractors
+* [youtube] Fix YoutubePlaylistsIE (#32)
+* [xiami] Raise expressive error thrown by vendor
+
 version 2020.11.01
 
 Core
