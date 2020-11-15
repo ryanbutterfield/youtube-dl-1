@@ -1,8 +1,8 @@
-version 2020.11.10
+version 2020.11.12
 
 Extractors
-* [youtube] Fix YoutubePlaylistsIE (#32)
-* [xiami] Raise expressive error thrown by vendor
+* [youtube] Rework extractors
+
 
 version 2020.11.01
 
@@ -21,19 +21,6 @@ Extractors
 + [expressen] Add support for di.se (#26670)
 * [iprima] Improve video id extraction (#26507, #26494)
 
-version 2020.10.31
-
-Core
-+ [release] Fix release tarball not being properly generated
-* [readme] Fix download link for Unix users
-
-Extractors
-* [youtube] Re-add age restriction test (#14)
-
-version 2020.10.30
-
-Extractors
-* [youtube] Fix "Unable to extract JS player URL" (#12)
 
 version 2020.09.20
 
