@@ -1,7 +1,8 @@
-[![Build Status](https://travis-ci.org/ytdl-org/youtube-dl.svg?branch=master)](https://travis-ci.org/ytdl-org/youtube-dl)
+[![Build Status](https://travis-ci.com/l1ving/youtube-dl.svg?branch=master)](https://travis-ci.com/l1ving/youtube-dl)
 
 youtube-dl - download videos from youtube.com or other video platforms
 
+- [CHANGES](#changes)
 - [INSTALLATION](#installation)
 - [DESCRIPTION](#description)
 - [OPTIONS](#options)
@@ -15,16 +16,24 @@ youtube-dl - download videos from youtube.com or other video platforms
 - [BUGS](#bugs)
 - [COPYRIGHT](#copyright)
 
+# CHANGES 
+
+You can view the changes made to ytdl-org/youtube-dl [here](https://github.com/l1ving/youtube-dl/compare/416da574ec0df3388f652e44f7fe71b1e3a4701f...master)
+
+You can view the archived tags here: [youtube-dl/releases](https://github.com/l1ving/youtube-dl/releases)
+
+You can view the archived unmerged pull requests here: [youtube-dl/tree/archive/recovered-github-prs](https://github.com/l1ving/youtube-dl/tree/archive/recovered-github-prs)
+
 # INSTALLATION
 
 To install it right away for all UNIX users (Linux, macOS, etc.), type:
 
-    sudo curl -L https://yt-dl.org/downloads/latest/youtube-dl -o /usr/local/bin/youtube-dl
+    sudo curl -L https://github.com/l1ving/youtube-dl/releases/latest/download/youtube-dl -o /usr/local/bin/youtube-dl
     sudo chmod a+rx /usr/local/bin/youtube-dl
 
 If you do not have curl, you can alternatively use a recent wget:
 
-    sudo wget https://yt-dl.org/downloads/latest/youtube-dl -O /usr/local/bin/youtube-dl
+    sudo wget https://github.com/l1ving/youtube-dl/releases/latest/download/youtube-dl -O /usr/local/bin/youtube-dl
     sudo chmod a+rx /usr/local/bin/youtube-dl
 
 Windows users can [download an .exe file](https://yt-dl.org/latest/youtube-dl.exe) and place it in any location on their [PATH](https://en.wikipedia.org/wiki/PATH_%28variable%29) except for `%SYSTEMROOT%\System32` (e.g. **do not** put in `C:\Windows\System32`).
@@ -545,7 +554,7 @@ The basic usage is not to set any template arguments when downloading a single f
  - `extractor` (string): Name of the extractor
  - `extractor_key` (string): Key name of the extractor
  - `epoch` (numeric): Unix epoch when creating the file
- - `autonumber` (numeric): Five-digit number that will be increased with each download, starting at zero
+ - `autonumber` (numeric): Number that will be increased with each download, starting at `--autonumber-start`
  - `playlist` (string): Name or id of the playlist that contains the video
  - `playlist_index` (numeric): Index of the video in the playlist padded with leading zeros according to the total length of the playlist
  - `playlist_id` (string): Playlist identifier
@@ -752,7 +761,7 @@ As a last resort, you can also uninstall the version installed by your package m
 Afterwards, simply follow [our manual installation instructions](https://ytdl-org.github.io/youtube-dl/download.html):
 
 ```
-sudo wget https://yt-dl.org/downloads/latest/youtube-dl -O /usr/local/bin/youtube-dl
+sudo wget https://github.com/l1ving/youtube-dl/releases/latest/download/youtube-dl -O /usr/local/bin/youtube-dl
 sudo chmod a+rx /usr/local/bin/youtube-dl
 hash -r
 ```
